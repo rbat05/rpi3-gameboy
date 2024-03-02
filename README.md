@@ -16,10 +16,13 @@ Input - [Gameboy Zero PCB Button Board](https://www.aliexpress.com/item/32993474
 Buttons - [Original Gameboy Rubber Pads and Buttons](https://www.aliexpress.com/item/1005002518901690.html)  
 Power Converter - [LM2596 Step Down Converter 3A](https://www.aliexpress.com/item/32653212622.html)  
 
-Wiring - ![Wiring Diagram](https://github.com/rbat05/rpi3-gameboy/assets/66808770/6b5f8d53-e686-4ec6-9776-4ff5e800463e)
+Wiring -  
+![Wiring Diagram](https://github.com/rbat05/rpi3-gameboy/assets/66808770/6b5f8d53-e686-4ec6-9776-4ff5e800463e)
 
-### Code
+### Code  
+
 Retropie handles the emulation part of the project. Code is needed to get the **button board** and the **display** to work.  
+
 #### Button board
 For the button board I used the [GPIOnext](https://github.com/mholgatem/GPIOnext) library. 
 First, SSH into your pi, then
@@ -90,18 +93,23 @@ hdmi_group=2
 hdmi_mode=87
 hdmi_drive=2
 ```
-That's all the code needed to get this project to work.
+That's all the code needed to get this project to work.  
+
 ### CAD Modelling
 Modelled it all in Fusion 360, the shell was easy to design as a result. All files available in CAD folder.
-Cad Screenshots -
-![cad 1](https://github.com/rbat05/rpi3-gameboy/assets/66808770/3a3b7dc0-b6fc-4283-bc92-1005bdb71339)
-![cad 2](https://github.com/rbat05/rpi3-gameboy/assets/66808770/7125cb3c-61b7-4f58-b095-8a906cf64b9f)
-![cad 3](https://github.com/rbat05/rpi3-gameboy/assets/66808770/4fe74a1b-4942-4085-8385-94e479dfa0f6)
+<img src="https://github.com/rbat05/rpi3-gameboy/assets/66808770/3a3b7dc0-b6fc-4283-bc92-1005bdb71339" height="400">
+<img src="https://github.com/rbat05/rpi3-gameboy/assets/66808770/7125cb3c-61b7-4f58-b095-8a906cf64b9f" height="400">
+<img src="https://github.com/rbat05/rpi3-gameboy/assets/66808770/4fe74a1b-4942-4085-8385-94e479dfa0f6" height="400">  
+
 ### Final Build
 
 # Photos  
-Working Prototype - ![Prototypevideofixed-ezgif com-video-to-gif-converter](https://github.com/rbat05/rpi3-gameboy/assets/66808770/83355c5b-f5fb-4920-92dd-f46e30624065)  
-Working Test Type - ![Working Test type](https://github.com/rbat05/rpi3-gameboy/assets/66808770/52cf1761-f763-4323-8893-655a77a31283)  
-Test Type Internals - ![Test Type Internals](https://github.com/rbat05/rpi3-gameboy/assets/66808770/9e683b5a-e6d0-4789-b8bd-c80be6dadb81)
+Working Prototype -  
+![Prototypevideofixed-ezgif com-video-to-gif-converter](https://github.com/rbat05/rpi3-gameboy/assets/66808770/83355c5b-f5fb-4920-92dd-f46e30624065)  
+Working Test Type -  
+<img src="https://github.com/rbat05/rpi3-gameboy/assets/66808770/52cf1761-f763-4323-8893-655a77a31283" height="400">  
+Test Type Internals -  
+<img src="https://github.com/rbat05/rpi3-gameboy/assets/66808770/9e683b5a-e6d0-4789-b8bd-c80be6dadb81" height="400">
 
 # Things to improve
+There is 1 big issue with this project, the power draw is too much. The pi 3b+ requires a 2.5A power source. There weren't any readily available step up modules (step up 1s 3.4v to 5v) that support that current value, so I had to use a 2s battery and step it down to 5v using the LM2596 module, the issue with this module is that it does not keep the voltage at 5v. When the battery voltage drops, the module's output voltage drops below 5v, which then undervolts the pi. As a result, the device can only be used for 20 minutes before the module needs to be adjusted to 5v again.
