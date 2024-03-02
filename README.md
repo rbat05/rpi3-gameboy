@@ -2,7 +2,7 @@
 A Raspberry Pi 3B+ based handheld games console.
 
 # Current Project Status
-The project works, I just need to resolder everything to organise the wires. Project currently on hold.
+The project works, I just need to resolder everything to organise the wires. Project currently on hold (as of 02/03/24).
 
 # Capabilities
 Can play retro games from multiple consoles upto the Playstation 1. This includes: Nintendo Systems (NES, SNES, GB, GBA, GBC), Sega Systems (Master System, Mega Drive) & the Playstation 1. Most systems before the PS1 should work. All thanks to the Retropie OS. Go to [Retropie Supported Systems](https://retropie.org.uk/docs/Supported-Systems/) page for more info.
