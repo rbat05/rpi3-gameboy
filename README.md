@@ -1,6 +1,9 @@
 # rpi3-gameboy
 A Raspberry Pi 3B+ based handheld games console.
 
+# Current Project Status
+The project works, I just need to resolder everything to organise the wires. Project currently on hold.
+
 # Capabilities
 Can play retro games from multiple consoles upto the Playstation 1. This includes: Nintendo Systems (NES, SNES, GB, GBA, GBC), Sega Systems (Master System, Mega Drive) & the Playstation 1. Most systems before the PS1 should work. All thanks to the Retropie OS. Go to [Retropie Supported Systems](https://retropie.org.uk/docs/Supported-Systems/) page for more info.
 
@@ -12,6 +15,8 @@ Display - [ILI9341 3.2inch 320x240 SPI TFT](https://www.aliexpress.com/item/1005
 Input - [Gameboy Zero PCB Button Board](https://www.aliexpress.com/item/32993474020.html)  
 Buttons - [Original Gameboy Rubber Pads and Buttons](https://www.aliexpress.com/item/1005002518901690.html)  
 Power Converter - [LM2596 Step Down Converter 3A](https://www.aliexpress.com/item/32653212622.html)  
+
+Wiring - ![Wiring Diagram](https://github.com/rbat05/rpi3-gameboy/assets/66808770/6b5f8d53-e686-4ec6-9776-4ff5e800463e)
 
 ### Code
 Retropie handles the emulation part of the project. Code is needed to get the **button board** and the **display** to work.  
@@ -87,9 +92,16 @@ hdmi_drive=2
 ```
 That's all the code needed to get this project to work.
 ### CAD Modelling
-
+Modelled it all in Fusion 360, the shell was easy to design as a result. All files available in CAD folder.
+Cad Screenshots -
+![cad 1](https://github.com/rbat05/rpi3-gameboy/assets/66808770/3a3b7dc0-b6fc-4283-bc92-1005bdb71339)
+![cad 2](https://github.com/rbat05/rpi3-gameboy/assets/66808770/7125cb3c-61b7-4f58-b095-8a906cf64b9f)
+![cad 3](https://github.com/rbat05/rpi3-gameboy/assets/66808770/4fe74a1b-4942-4085-8385-94e479dfa0f6)
 ### Final Build
 
-# Photos
+# Photos  
+Working Prototype - ![Prototypevideofixed-ezgif com-video-to-gif-converter](https://github.com/rbat05/rpi3-gameboy/assets/66808770/83355c5b-f5fb-4920-92dd-f46e30624065)  
+Working Test Type - ![Working Test type](https://github.com/rbat05/rpi3-gameboy/assets/66808770/52cf1761-f763-4323-8893-655a77a31283)  
+Test Type Internals - ![Test Type Internals](https://github.com/rbat05/rpi3-gameboy/assets/66808770/9e683b5a-e6d0-4789-b8bd-c80be6dadb81)
 
 # Things to improve
